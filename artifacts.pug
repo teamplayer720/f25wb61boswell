@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+    h1 Search Results - Artifacts 
+    -
+    const results = [
+      { artifact_name: "Ancient Vase", origin: "Greece", age: 2400 },
+      { artifact_name: "Stone Tablet", origin: "Mesopotamia", age: 3700 },
+      { artifact_name: "Golden Mask", origin: "Egypt", age: 3300 }
+    ]
+
+  
+  .container-fluid
+    .row
+      each item in results
+        .col-sm-2
+          h4 #{item.artifact_name}
+          p Origin: #{item.origin}
+          p Age: #{item.age} years
